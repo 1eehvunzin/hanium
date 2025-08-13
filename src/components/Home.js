@@ -2,7 +2,7 @@ import React from 'react';
 import pill from '../assets/images/icons8-pill-96 1.png';
 import capsule from '../assets/images/caps7_9dsddssd 1.png'
 import medicine from '../assets/images/icons8-medicine-90.png'
-
+import tablet from '../assets/images/pill01_v1_w 1.png'
 import '../assets/style.css';
 
 function Header({ onMenuClick}) {
@@ -31,9 +31,9 @@ function Header({ onMenuClick}) {
         <img src={medicine} alt='영양제'></img>  
         </div>
         <h4 style={{color: '#191d30',marginTop: '12px', marginBottom: '16px'}}>8:00</h4>
-        <div className='box' style={{display: 'flex', flexDirection: 'row'}}>
-            <img src={capsule} alt='캡슐'></img>
-            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+        <div className='medicine-box' style={{display: 'flex', flexDirection: 'row'}}>
+            <img src={tablet} alt='정'></img>
+            <div style={{display: 'flex', flexDirection: 'column', margin: '24px 0'}}>
                 <h3>오메가 3</h3>
                 <h4>식후 3정</h4>
             </div>
