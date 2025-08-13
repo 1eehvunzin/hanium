@@ -1,8 +1,12 @@
 import Home from './components/Home.js'
+import Add from './components/Add.js'
 
 function App() {
   return (
-      <Home/>
+      <div>
+        <Home/>
+        <Add/>
+      </div>  
   );
 }
 

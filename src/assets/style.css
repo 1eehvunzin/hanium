@@ -22,6 +22,17 @@ h2 {
     letter-spacing: -0.35px;
     margin: 0;
 }
+h3 {
+    color: var(--dark-191-d-30, #191D30);
+    font-variant-numeric: lining-nums proportional-nums;
+    /* SF Pro Display/M 20-24 */
+    font-family: AppleSDGothicNeoB00;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 120% */
+    margin: 0;
+}
 h4 {
     color: var(--gray-8-c-8-e-97, #8C8E97);
     /* SF Pro Display/S 16-20 */
