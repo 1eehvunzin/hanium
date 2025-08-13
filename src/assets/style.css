@@ -1,0 +1,39 @@
+h1 {
+    color: var(--dark-191-d-30, #191D30);
+    font-variant-numeric: lining-nums tabular-nums;
+    /* SF Pro Display/XL 34-38 -0.37 */
+    font-family: AppleSDGothicNeoB00;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px; /* 111.765% */
+    letter-spacing: -0.37px;
+    margin: 0;
+    }
+h2 {
+    color: var(--dark-191-d-30, #191D30);
+    font-variant-numeric: lining-nums proportional-nums;
+    /* SF Pro Display/L 24-28 -0.35 */
+    font-family: AppleSDGothicNeoB00;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 116.667% */
+    letter-spacing: -0.35px;
+    margin: 0;
+}
+h4 {
+    color: var(--gray-8-c-8-e-97, #8C8E97);
+    /* SF Pro Display/S 16-20 */
+    font-family: AppleSDGothicNeoM00;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    margin: 0;
+}
+.box {
+    border-radius: 24px;
+    border: 1px solid var(--Gray-3-ECEDEF, #ECEDEF);
+    padding: 20px 24px;
+}
