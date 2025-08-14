@@ -10,10 +10,12 @@ function Menu({ onClose }) {
         </button>
         <h3 style={{marginLeft: '21px'}}>메뉴</h3>
       </div>
-      <div className='box' style={{display:'flex', flexDirection:'row', marginTop:'24px'}}>
-        <img src={google} alt='구글' style={{marginRight: '24px'}}></img>
-        <h4 style={{color: 'black'}}>Google 계정으로 로그인</h4>
-      </div>
+      <button style={{width: '100%'}}>
+        <div className='box' style={{display:'flex', flexDirection:'row', marginTop:'24px'}}>
+          <img src={google} alt='구글' style={{marginRight: '24px'}}></img>
+          <h4 style={{color: 'black'}}>Google 계정으로 로그인</h4>
+        </div>
+      </button>
       
       
     </div>
