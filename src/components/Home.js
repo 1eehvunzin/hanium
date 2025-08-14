@@ -6,7 +6,7 @@ import menu from '../assets/images/Glyph.png'
 import date from '../assets/images/18 Arrow-down.png'
 import '../assets/style.css';
 
-function Home ({ onMenuClick}) {
+function Home ({onMenuClick}) {
   const [selectedDate, setSelectedDate] = useState(new Date()); // 기본: 오늘 날짜
   const dateInputRef = useRef(null);
 

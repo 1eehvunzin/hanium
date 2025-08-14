@@ -1,14 +1,17 @@
 import { useState } from 'react';
 
 import Home from './components/Home.js'
-import Add from './components/Add.js'
+import AddBtn from './components/AddBtn.js'
 import IntakeScheduler from './components/IntakeScheduler.js'
 import Menu from './components/Menu.js'
+import Add from './components/Add.js'
 import './assets/style.css';
+
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [closeMenu, setCloseMenu] = useState(false);
+  const [showAdd, setShowAdd] = useState(false);
 
   const handleCloseMenu = () => {
     setCloseMenu(true); // slideOut 시작
@@ -22,7 +25,7 @@ function App() {
     <div>
       <Home onMenuClick={() => setShowMenu(true)}/>
       <IntakeScheduler/>
-      <Add/>
+      <AddBtn onAddClick={() => setShowAdd(true)}/>
 
       {showMenu && (
       <div
@@ -38,6 +41,22 @@ function App() {
           }}
         >
           <Menu onClose={handleCloseMenu} />
+        </div>
+      )}
+
+      {showAdd && (
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'white',
+          zIndex: 999,
+          }}
+        >
+          <Add/>
         </div>
       )}
     </div>  
