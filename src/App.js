@@ -13,8 +13,8 @@ function App() {
   const handleCloseMenu = () => {
     setCloseMenu(true); // slideOut 시작
     setTimeout(() => {
-      setShowMenu(false); // 애니메이션 끝난 후 언마운트
-      setCloseMenu(false);  // 다음 열기에 대비
+    setShowMenu(false); // 애니메이션 끝난 후 언마운트
+    setCloseMenu(false);  // 다음 열기에 대비
     }, 300); // slideOut 시간과 동일
   };
   
