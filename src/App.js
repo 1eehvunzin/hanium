@@ -5,6 +5,7 @@ import AddBtn from './components/AddBtn.js'
 import IntakeScheduler from './components/IntakeScheduler.js'
 import Menu from './components/Menu.js'
 import Add from './components/Add.js'
+import Add2 from './components/Add2.js'
 import './assets/style.css';
 
 
@@ -12,6 +13,7 @@ function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [closeMenu, setCloseMenu] = useState(false);
   const [showAdd, setShowAdd] = useState(false);
+  const [showAdd2, setShowAdd2] = useState(false);
 
   const handleCloseMenu = () => {
     setCloseMenu(true); // slideOut 시작
@@ -43,11 +45,10 @@ function App() {
           <Menu onClose={handleCloseMenu} />
         </div>
       )}
-
       {showAdd && (
       <div
         style={{
-          position: 'absolute',
+          position: 'fixed',
           top: 0,
           left: 0,
           width: '100%',
@@ -56,7 +57,22 @@ function App() {
           zIndex: 999,
           }}
         >
-          <Add/>
+          <Add onAdd2Click={setShowAdd2}/>
+        </div>
+      )}
+      {showAdd2 && (
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'white',
+          zIndex: 1000,
+          }}
+        >
+          <Add2/>
         </div>
       )}
     </div>  

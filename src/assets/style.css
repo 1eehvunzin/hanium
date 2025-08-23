@@ -110,4 +110,30 @@ input::placeholder {
 .slide-out {
   animation: slideOut 0.3s forwards;
 }
+.intake-btn {
+  padding: 7px 20px;
+  margin-right: 24px;
+
+  color: var(--dark-191-d-30, #c4cacf);
+  font-variant-numeric: lining-nums proportional-nums;
+    /* SF Pro Display/M 20-24 */
+  font-family: AppleSDGothicNeoB00;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+}
+.intake-btn.active {
+  background-color: #f2f6f7;
+  border-radius: 10%;
+  color: #191D30;
+
+}
+.next-btn {
+  display: flex;
+  justify-content: center;
+  margin: 44px 24px;
+  background-color: #1892FA;
+  border-radius: 16px;
+}
 

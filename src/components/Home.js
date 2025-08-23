@@ -65,6 +65,7 @@ function Home ({onMenuClick}) {
                 <img src={medicine} alt='영양제'></img>  
             </div>
         </button>
+        <h4 style={{color: '#191d30',marginTop: '12px', marginBottom: '16px'}}>8:00</h4>
     </div>    
   );
 }
