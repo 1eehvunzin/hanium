@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import pill from "../assets/images/icons8-pill-96 1.png";
-import medicine from "../assets/images/icons8-medicine-90.png";
 import menu from "../assets/images/Glyph.png";
 import date from "../assets/images/18 Arrow-down.png";
 import "../assets/style.css";
@@ -18,6 +17,7 @@ function Home({ onMenuClick }) {
       ? dateInputRef.current.showPicker() // 일부 브라우저는 showPicker 지원
       : dateInputRef.current.click();
   };
+  const navigate = useNavigate();
 
   const handleDateChange = (e) => {
     const newDate = new Date(e.target.value);
@@ -28,6 +28,17 @@ function Home({ onMenuClick }) {
 
   const getWeekday = (date) =>
     date.toLocaleDateString("en-US", { weekday: "long" });
+
+  const [preview, setPreview] = useState(null);
+
+  const handleFileChange = (e) => {
+    if (e.target.files.length > 0) {
+      console.log("파일 선택됨:", e.target.files[0]);
+      const imageUrl = URL.createObjectURL(e.target.files[0]);
+      setPreview(imageUrl);
+      navigate("/AddByImage", { state: { imageUrl } });
+    }
+  };
 
   return (
     <div style={{ padding: "0 24px", position: "relative", zIndex: 3 }}>
@@ -60,29 +71,35 @@ function Home({ onMenuClick }) {
           value={selectedDate.toISOString().substring(0, 10)}
         />
       </div>
-      <button style={{ width: "100%" }}>
-        <div
-          className="box"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            marginBottom: "16px",
-          }}
-        >
-          <div>
-            <h2 style={{ marginBottom: "8px" }}>
-              이미지를 통해
-              <br />
-              의약품 / 영양제
-              <br />
-              검색하기
-            </h2>
-            <h4>선택하여 시작하세요</h4>
+      <form method="post" encType="multipart/form-data">
+        <label htmlFor="chooseFile" style={{ width: "100%" }}>
+          <div
+            className="box"
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <div>
+              <h2>
+                이미지를 통해
+                <br />
+                의약품 / 영양제
+                <br />
+                검색하기
+              </h2>
+              <h4>선택하여 시작하세요</h4>
+            </div>
+            <img src={pill} alt="알약" style={{ objectFit: "cover" }} />
           </div>
-          <img src={pill} alt="알약" style={{ objectFit: "cover" }}></img>
-        </div>
-      </button>
+        </label>
+        <input
+          type="file"
+          id="chooseFile"
+          name="chooseFile"
+          accept="image/*"
+          onChange={handleFileChange}
+          style={{ display: "none" }}
+        />
+      </form>
+
       <h4 style={{ color: "#191d30", marginTop: "12px", marginBottom: "16px" }}>
         8:00
       </h4>

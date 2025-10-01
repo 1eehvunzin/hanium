@@ -30,7 +30,7 @@ function Add2() {
             width: "100%",
           }}
         >
-          <Link to="/add">
+          <Link to="/addbyimage">
             <button style={{ marginTop: "44px", marginBottom: "12px" }}>
               <img src={previous} alt="이전"></img>
             </button>
@@ -65,7 +65,7 @@ function Add2() {
       </div>
       <Link to="/" className="next-btn">
         <button>
-          <h4 style={{ color: "#ffffff", margin: "17px 0" }}>등록</h4>
+          <h4 style={{ color: "#ffffff", margin: "17px 0" }}>등록 (n/n)</h4>
         </button>
       </Link>
     </div>

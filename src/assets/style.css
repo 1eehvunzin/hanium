@@ -91,6 +91,9 @@ input {
 input::placeholder {
   color: #c4cacf;
 }
+a {
+  text-decoration: none;
+}
 @keyframes slideIn {
   from {
     transform: translateX(100%);

@@ -1,7 +1,7 @@
 import React from "react";
-function IntakeScheduler() {
+function PillSearchRes() {
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", marginBottom: "16px" }}>
       <div
         className="medicine-box"
         style={{ display: "flex", flexDirection: "row" }}
@@ -23,8 +23,8 @@ function IntakeScheduler() {
               justifyContent: "space-between",
             }}
           >
-            <h4>식후 3정</h4>
-            <h4>7 Days</h4>
+            <h4>더블 클릭하여 상세 정보 확인</h4>
+            <h4>의약품</h4>
           </div>
         </div>
       </div>
@@ -32,4 +32,4 @@ function IntakeScheduler() {
   );
 }
 
-export default IntakeScheduler;
+export default PillSearchRes;

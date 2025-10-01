@@ -2,11 +2,13 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home.js";
-import AddBtn from "./components/AddBtn.js";
 
 import Menu from "./components/Menu.js";
 import Add from "./components/Add.js";
 import Add2 from "./components/Add2.js";
+
+import AddByImage from "./components/AddByImage.js";
+import Add2ByImage from "./components/Add2ByImage.js";
 import "./assets/style.css";
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         />
         <Route path="/add" element={<Add />} />
         <Route path="/add2" element={<Add2 />}></Route>
+        <Route path="/addbyimage" element={<AddByImage />}></Route>
+        <Route path="/add2byimage" element={<Add2ByImage />}></Route>
       </Routes>
 
       {showMenu && (
