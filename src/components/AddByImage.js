@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import previous from "../assets/images/Group.png";
 import "../assets/style.css";

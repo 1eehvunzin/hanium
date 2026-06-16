@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import pill from "../assets/images/icons8-pill-96 1.png";
 import menu from "../assets/images/Glyph.png";
@@ -29,13 +29,10 @@ function Home({ onMenuClick }) {
   const getWeekday = (date) =>
     date.toLocaleDateString("en-US", { weekday: "long" });
 
-  const [preview, setPreview] = useState(null);
-
   const handleFileChange = (e) => {
     if (e.target.files.length > 0) {
       console.log("파일 선택됨:", e.target.files[0]);
       const imageUrl = URL.createObjectURL(e.target.files[0]);
-      setPreview(imageUrl);
       navigate("/AddByImage", { state: { imageUrl } });
     }
   };

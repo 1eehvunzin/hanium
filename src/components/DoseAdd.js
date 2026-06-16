@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 function DoseAdd({ index }) {
   const [time, setTime] = useState("00:00");
